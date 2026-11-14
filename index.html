@@ -193,7 +193,6 @@
             object-fit: cover;
             object-position: top center;
             border-radius: 20px;
-            /* TikTok Style Soft Edge Blend Mask */
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%),
                         linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%),
@@ -329,17 +328,13 @@
             padding: 2.2rem;
         }
 
-        .project-icon {
-            width: 55px;
-            height: 55px;
-            background: var(--accent-light);
-            color: var(--primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--border);
         }
 
         .project-card h4 {
@@ -455,7 +450,7 @@
         </ul>
     </nav>
 
-    <!-- Hero Section (With Profile Photo Banner Fade) -->
+    <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-container reveal">
             <div class="hero-content">
@@ -468,7 +463,6 @@
                 </div>
             </div>
 
-            <!-- Soft Faded Photo Banner -->
             <div class="hero-banner-image">
                 <img src="profile.jpg" alt="J.W.N. Madushan">
             </div>
@@ -497,7 +491,7 @@
         </div>
     </div>
 
-    <!-- Featured CAD Project -->
+    <!-- Featured CAD Project (Using your uploaded SolidWorks packing line conveyor photo) -->
     <section id="cad-project">
         <div class="section-title reveal">
             <h2>Featured CAD Design Project</h2>
@@ -530,7 +524,7 @@
                 <div class="cad-visual">
                     <div class="cad-img-box">
                         <p style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.5rem;">GB_Concept 01.STEP - CAD ASSEMBLY VIEW</p>
-                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Conveyor SolidWorks Model">
+                        <img src="conveyor.jpg" alt="Conveyor SolidWorks Model">
                     </div>
                 </div>
             </div>
@@ -546,37 +540,37 @@
 
         <div class="projects-grid">
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Box Forming Robot">
                 <h4>Automated Box Forming Robot</h4>
                 <p>Led end-to-end development of an automated box-making robot for packaging lines. Integrated PLC, VFD control panel, optical sensors, and robotic box sealing mechanisms.</p>
             </div>
 
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-spider"></i></div>
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Spider Robot">
                 <h4>8-Leg Spider Robot</h4>
                 <p>Designed and built a multi-legged robot utilizing the Theo Jansen linkage mechanism. Driven by a single motor with a 3-gear system for smooth kinematic motion coordination.</p>
             </div>
 
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Cobot Packaging">
                 <h4>Cobot Packaging Integration</h4>
                 <p>Programmed collaborative robots (Cobots) for automated end-of-line corrugated box packaging, optimizing cycle times and operator safety standards.</p>
             </div>
 
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-prescription-bottle"></i></div>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Cap Feeder">
                 <h4>Automated Cap Feeder & Bottling Jig</h4>
                 <p>Designed a custom mechanical jig to prevent bottle damage during transport and engineered an automatic cap feeding & closing mechanism.</p>
             </div>
 
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-pump-soap"></i></div>
+                <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" alt="Lobe Pump">
                 <h4>Lobe Pump Liquid Filling System</h4>
                 <p>Engineered electrical wiring, speed configuration (VFD), and testing for high-precision automatic liquid filling pump systems.</p>
             </div>
 
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-industry"></i></div>
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Kaizen">
                 <h4>Kaizen & 5S Process Engineering</h4>
                 <p>Award-winning implementation of 5S visual control methods, safety barriers, continuous improvement (Kaizen), and industrial ergonomics.</p>
             </div>
