@@ -90,19 +90,31 @@
             color: var(--primary);
         }
 
-        /* --- Hero Section with Background Robotics Fade Effect --- */
+        /* --- Hero Section with Smooth Bottom Fade Background --- */
         .hero {
             min-height: 90vh;
             display: flex;
             align-items: center;
             padding: 9rem 8% 5rem;
             position: relative;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 58, 138, 0.82)), 
+            background-color: #0F172A;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 58, 138, 0.8)), 
                         url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
-            overflow: hidden;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            z-index: 1;
         }
 
         .hero-container {
@@ -347,15 +359,50 @@
             font-size: 0.95rem;
         }
 
-        /* --- Clean Technical Skills Section --- */
+        /* --- Technical Skills Section with Thematic Watermark Cards --- */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .skill-box {
+            position: relative;
             padding: 2.5rem;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+        }
+
+        .skill-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .skill-box-design::before {
+            background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80');
+        }
+
+        .skill-box-automation::before {
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80');
+        }
+
+        .skill-box-education::before {
+            background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80');
+        }
+
+        .skill-box > * {
+            position: relative;
+            z-index: 2;
         }
 
         .skill-box h4 {
@@ -459,7 +506,7 @@
         </ul>
     </nav>
 
-    <!-- Hero Section with Background Fade Robotics Theme -->
+    <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-container reveal">
             <div class="hero-content">
@@ -500,7 +547,7 @@
         </div>
     </div>
 
-    <!-- Featured CAD Project (Using conveyor.jpg) -->
+    <!-- Featured CAD Project -->
     <section id="cad-project">
         <div class="section-title reveal">
             <h2>Featured CAD Design Project</h2>
@@ -586,7 +633,7 @@
         </div>
     </section>
 
-    <!-- Clean Technical Skills Section -->
+    <!-- Technical Skills with Thematic Background Cards -->
     <section id="skills">
         <div class="section-title reveal">
             <h2>Technical Skills & Expertise</h2>
@@ -594,7 +641,7 @@
         </div>
 
         <div class="skills-container reveal">
-            <div class="skill-box">
+            <div class="skill-box skill-box-design">
                 <h4><i class="fas fa-drafting-compass"></i> Engineering Design</h4>
                 <div class="skill-item-row"><span class="skill-name">Mechanical CAD Design</span><span class="skill-level">SolidWorks</span></div>
                 <div class="skill-item-row"><span class="skill-name">SCADA / HMI Layouts</span><span class="skill-level">Advanced</span></div>
@@ -602,7 +649,7 @@
                 <div class="skill-item-row"><span class="skill-name">Power Apps & Dashboards</span><span class="skill-level">Intermediate</span></div>
             </div>
 
-            <div class="skill-box">
+            <div class="skill-box skill-box-automation">
                 <h4><i class="fas fa-bolt"></i> Automation & Control</h4>
                 <div class="skill-item-row"><span class="skill-name">PLC Programming</span><span class="skill-level">Moratuwa Trained</span></div>
                 <div class="skill-item-row"><span class="skill-name">VFD Control Panel Wiring</span><span class="skill-level">Expert</span></div>
@@ -610,7 +657,7 @@
                 <div class="skill-item-row"><span class="skill-name">Robotics Motion Control</span><span class="skill-level">Cobots</span></div>
             </div>
 
-            <div class="skill-box">
+            <div class="skill-box skill-box-education">
                 <h4><i class="fas fa-graduation-cap"></i> Education & Certification</h4>
                 <div class="skill-item-row"><span class="skill-name">Automated Systems (PLC)</span><span class="skill-level">Uni of Moratuwa</span></div>
                 <div class="skill-item-row"><span class="skill-name">NDT Mechatronics</span><span class="skill-level">College of Tech</span></div>
