@@ -40,7 +40,6 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* --- Scroll Animations --- */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -52,7 +51,6 @@
             transform: translateY(0);
         }
 
-        /* --- Navigation --- */
         nav {
             position: fixed;
             top: 0;
@@ -92,14 +90,18 @@
             color: var(--primary);
         }
 
-        /* --- Hero Section with TikTok Banner Photo Fade --- */
+        /* --- Hero Section with Background Robotics Fade Effect --- */
         .hero {
-            min-height: 85vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 8rem 8% 4rem;
+            padding: 9rem 8% 5rem;
             position: relative;
-            background: #F8FAFC;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 58, 138, 0.82)), 
+                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
             overflow: hidden;
         }
 
@@ -118,27 +120,28 @@
         }
 
         .badge {
-            background: var(--accent-light);
-            color: var(--accent);
+            background: rgba(2, 132, 199, 0.25);
+            color: #38BDF8;
             padding: 0.5rem 1.4rem;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 700;
             display: inline-block;
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
 
         .hero h1 {
             font-size: 3.2rem;
             line-height: 1.2;
             margin-bottom: 1.2rem;
-            color: var(--text-dark);
+            color: #ffffff;
             font-weight: 800;
         }
 
         .hero p {
             font-size: 1.15rem;
-            color: var(--text-muted);
+            color: #CBD5E1;
             margin-bottom: 2rem;
         }
 
@@ -158,7 +161,7 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
         }
 
         .btn-primary:hover {
@@ -167,17 +170,17 @@
         }
 
         .btn-secondary {
-            background: white;
-            color: var(--text-dark);
-            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: #F1F5F9;
+            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
-        /* --- TikTok Banner Photo Fade Overlay --- */
         .hero-banner-image {
             position: relative;
             width: 100%;
@@ -193,13 +196,12 @@
             object-fit: cover;
             object-position: top center;
             border-radius: 20px;
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%),
-                        linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%),
-                                linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.15);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
         }
 
-        /* --- Stats Banner --- */
         .stats-section {
             padding: 1.5rem 8%;
             margin-top: -2rem;
@@ -254,7 +256,6 @@
             color: var(--text-muted);
         }
 
-        /* --- 3D Hover Cards --- */
         .project-card, .featured-cad, .skill-box {
             background: var(--bg-card);
             border-radius: 16px;
@@ -269,7 +270,6 @@
             border-color: var(--primary);
         }
 
-        /* --- Featured CAD Project --- */
         .featured-cad {
             padding: 3rem;
         }
@@ -317,7 +317,6 @@
             border-radius: 8px;
         }
 
-        /* --- Projects Grid --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -340,6 +339,7 @@
         .project-card h4 {
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
+            color: var(--text-dark);
         }
 
         .project-card p {
@@ -347,40 +347,50 @@
             font-size: 0.95rem;
         }
 
-        /* --- Skills Section --- */
+        /* --- Clean Technical Skills Section --- */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .skill-box {
-            padding: 2.2rem;
+            padding: 2.5rem;
         }
 
         .skill-box h4 {
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.5rem;
             color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            font-size: 1.2rem;
+            gap: 0.8rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.8rem;
         }
 
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.7rem 0;
-            color: var(--text-muted);
-            border-bottom: 1px dashed var(--border);
+        .skill-item-row {
             display: flex;
             justify-content: space-between;
-            font-weight: 500;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed var(--border);
         }
 
-        /* --- Contact --- */
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .skill-level {
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+        }
+
         .contact-box {
             background: white;
             border-radius: 20px;
@@ -438,7 +448,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <div class="logo">J.W.N. MADUSHAN</div>
         <ul class="nav-links">
@@ -450,7 +459,7 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Fade Robotics Theme -->
     <section class="hero" id="about">
         <div class="hero-container reveal">
             <div class="hero-content">
@@ -491,7 +500,7 @@
         </div>
     </div>
 
-    <!-- Featured CAD Project (Using your uploaded SolidWorks packing line conveyor photo) -->
+    <!-- Featured CAD Project (Using conveyor.jpg) -->
     <section id="cad-project">
         <div class="section-title reveal">
             <h2>Featured CAD Design Project</h2>
@@ -501,7 +510,7 @@
         <div class="featured-cad reveal">
             <div class="cad-grid">
                 <div class="cad-info">
-                    <span class="badge" style="background: #E0F2FE; color: #0284C7;">SolidWorks Concept Design</span>
+                    <span class="badge" style="background: #E0F2FE; color: #0284C7; border: none;">SolidWorks Concept Design</span>
                     <h3>Gummy Plant Packing Line Conveyor System</h3>
                     <p>Designed a fully customized modular industrial conveyor assembly tailored specifically for automated packing line operations in high-capacity food and packaging plants.</p>
                     
@@ -577,7 +586,7 @@
         </div>
     </section>
 
-    <!-- Technical Skills -->
+    <!-- Clean Technical Skills Section -->
     <section id="skills">
         <div class="section-title reveal">
             <h2>Technical Skills & Expertise</h2>
@@ -587,32 +596,26 @@
         <div class="skills-container reveal">
             <div class="skill-box">
                 <h4><i class="fas fa-drafting-compass"></i> Engineering Design</h4>
-                <ul class="skill-list">
-                    <li>Mechanical CAD Design <span>SolidWorks</span></li>
-                    <li>SCADA / HMI Layouts <span>Advanced</span></li>
-                    <li>Pneumatics & Hydraulics <span>Proficient</span></li>
-                    <li>Power Apps & Dashboards <span>Intermediate</span></li>
-                </ul>
+                <div class="skill-item-row"><span class="skill-name">Mechanical CAD Design</span><span class="skill-level">SolidWorks</span></div>
+                <div class="skill-item-row"><span class="skill-name">SCADA / HMI Layouts</span><span class="skill-level">Advanced</span></div>
+                <div class="skill-item-row"><span class="skill-name">Pneumatics & Hydraulics</span><span class="skill-level">Proficient</span></div>
+                <div class="skill-item-row"><span class="skill-name">Power Apps & Dashboards</span><span class="skill-level">Intermediate</span></div>
             </div>
 
             <div class="skill-box">
                 <h4><i class="fas fa-bolt"></i> Automation & Control</h4>
-                <ul class="skill-list">
-                    <li>PLC Programming <span>Moratuwa Trained</span></li>
-                    <li>VFD Control Panel Wiring <span>Expert</span></li>
-                    <li>Industrial Sensors <span>Integrated</span></li>
-                    <li>Robotics Motion Control <span>Cobots</span></li>
-                </ul>
+                <div class="skill-item-row"><span class="skill-name">PLC Programming</span><span class="skill-level">Moratuwa Trained</span></div>
+                <div class="skill-item-row"><span class="skill-name">VFD Control Panel Wiring</span><span class="skill-level">Expert</span></div>
+                <div class="skill-item-row"><span class="skill-name">Industrial Sensors</span><span class="skill-level">Integrated</span></div>
+                <div class="skill-item-row"><span class="skill-name">Robotics Motion Control</span><span class="skill-level">Cobots</span></div>
             </div>
 
             <div class="skill-box">
                 <h4><i class="fas fa-graduation-cap"></i> Education & Certification</h4>
-                <ul class="skill-list">
-                    <li>Automated Systems (PLC) <span>Uni of Moratuwa</span></li>
-                    <li>NDT Mechatronics <span>College of Tech</span></li>
-                    <li>Engineering Tech <span>A/L Qualified</span></li>
-                    <li>Industrial Safety Training <span>Certified</span></li>
-                </ul>
+                <div class="skill-item-row"><span class="skill-name">Automated Systems (PLC)</span><span class="skill-level">Uni of Moratuwa</span></div>
+                <div class="skill-item-row"><span class="skill-name">NDT Mechatronics</span><span class="skill-level">College of Tech</span></div>
+                <div class="skill-item-row"><span class="skill-name">Engineering Tech</span><span class="skill-level">A/L Qualified</span></div>
+                <div class="skill-item-row"><span class="skill-name">Industrial Safety Training</span><span class="skill-level">Certified</span></div>
             </div>
         </div>
     </section>
@@ -637,29 +640,21 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 J.W.N. Madushan. All rights reserved. | Mechatronics & Automation Engineer</p>
     </footer>
 
-    <!-- Scroll Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const reveals = document.querySelectorAll('.reveal');
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                     }
                 });
-            }, {
-                threshold: 0.15
-            });
-
-            reveals.forEach(reveal => {
-                observer.observe(reveal);
-            });
+            }, { threshold: 0.15 });
+            reveals.forEach(reveal => observer.observe(reveal));
         });
     </script>
 </body>
